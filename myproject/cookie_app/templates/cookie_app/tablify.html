@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+{% load i18n django_tables2 %}
+{% block content %}
+{% render_table table %}
+{% endblock content %}
+
+
+<!-- {# cookie_app/templates/tablify.html #}
+{% load render_table from django_tables2 %}
+<!doctype html>
+<html>
+    <head>
+        <link rel="stylesheet" href="{{ STATIC_URL }}django_tables2/themes/paleblue/css/screen.css" />
+    </head>
+    <body>
+        {% render_table tablify %}
+    </body>
+</html>
+ -->
