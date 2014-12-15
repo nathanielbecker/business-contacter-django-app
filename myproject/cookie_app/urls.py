@@ -1,16 +1,16 @@
 from django.conf.urls import patterns, url, include
-from .views import barebones_CRUDList, barebones_CRUDCreate, barebones_CRUDDetail, barebones_CRUDUpdate, barebones_CRUDDelete, tablify
+from .views import Initial_Borr_List_PageList, Initial_Borr_List_PageCreate, Initial_Borr_List_PageDetail, Initial_Borr_List_PageUpdate, Initial_Borr_List_PageDelete, tablify
 from django.contrib import admin
 from cookie_app import views
 # from cookie_app.admin import admin_site # doesn't work yet
 
 urlpatterns = patterns(
     '',
-    url(r'^$', barebones_CRUDList.as_view(), name='barebones_crud_list'),
-    url(r'^new/$', barebones_CRUDCreate.as_view(), name='barebones_crud_create'),
-    url(r'^(?P<pk>\d+)/$', barebones_CRUDDetail.as_view(), name='barebones_crud_detail'),
-    url(r'^(?P<pk>\d+)/update/$', barebones_CRUDUpdate.as_view(), name='barebones_crud_update'),
-    url(r'^(?P<pk>\d+)/delete/$', barebones_CRUDDelete.as_view(), name='barebones_crud_delete'),
+    url(r'^$', Initial_Borr_List_PageList.as_view(), name='Initial_Borr_List_Page_list'),
+    url(r'^new/$', Initial_Borr_List_PageCreate.as_view(), name='Initial_Borr_List_Page_create'),
+    url(r'^(?P<pk>\d+)/$', Initial_Borr_List_PageDetail.as_view(), name='Initial_Borr_List_Page_detail'),
+    url(r'^(?P<pk>\d+)/update/$', Initial_Borr_List_PageUpdate.as_view(), name='Initial_Borr_List_Page_update'),
+    url(r'^(?P<pk>\d+)/delete/$', Initial_Borr_List_PageDelete.as_view(), name='Initial_Borr_List_Page_delete'),
     url(r'^admin/', include(admin.site.urls)),
     # url(r'^myadmin/', include(admin_site.urls)), # this includes the admin text-changing code in admin.py # doesn't work yet
     # url(r'^(?P<pk>\d+)/tablify/$', tablify.as_view(), name='tablify'),

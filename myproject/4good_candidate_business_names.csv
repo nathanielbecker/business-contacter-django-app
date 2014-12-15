@@ -1,0 +1,100 @@
+1	Colton	Food 4 Less	CA	1150 N Pepper Ave	0	1		San Bernardino	52	(909) 370-1761	Grocery Stores	$9,932,000	www.food4less.com	92324
+2	Beaumont	Food 4 Less	CA	1691 E 6th St	0	1		Riverside	52	(951) 845-3323	Grocery Stores	$9,932,000	www.food4less.com	92223
+3	Santa Ana	Stater Bros Markets	CA	2630 W Edinger Ave	0	1		Orange	52	(714) 437-0750	Grocery Stores	$9,932,000	www.staterbros.com	92704
+4	Anaheim	Food 4 Less	CA	1616 W Katella Ave	0	1		Orange	52	(714) 539-7497	Grocery Stores	$9,932,000	www.food4less.com	92802
+5	Los Angeles	Vons	CA	1342 N Alvarado St	0	1		Los Angeles	52	(213) 483-5573	Grocery Stores	$9,932,000	www.vons.com	90026
+6	San Diego	Krist Liquor	CA	7152 Linda Vista Rd	0	1	29	San Diego	52	(858) 292-7986	Grocery Stores	$9,932,000	plus.google.com/100084986273854334695/about	92111
+7	Murrieta	Ralphs	CA	40473 Murrieta Hot Springs Rd	0	1		Riverside	50	(951) 698-1768	Grocery Stores	$9,550,000	www.ralphs.com	92563
+8	Glendora	Stater Bros Markets	CA	1830 E Route 66	0	1		Los Angeles	50	(626) 963-0513	Grocery Stores	$9,550,000	www.staterbros.com	91740
+9	Compton	Ralphs	CA	280 E Compton Blvd	0	1		Los Angeles	50	(310) 631-6130	Grocery Stores	$9,550,000	www.ralphs.com	90220
+10	Duarte	Ralphs	CA	1193 Huntington Dr	0	1		Los Angeles	50	(626) 358-2338	Grocery Stores	$9,550,000	www.ralphs.com	91010
+11	Manhattan Beach	Vons	CA	410 Manhattan Beach Blvd	0	1		Los Angeles	50	(310) 379-3051	Grocery Stores	$9,550,000	www.vons.com	90266
+12	Los Angeles	Food 4 Less	CA	4910 Huntington Dr S	0	1		Los Angeles	50	(323) 222-2659	Grocery Stores	$9,550,000	www.food4less.com	90032
+13	Grass Valley	Grocery Outlet	CA	616 Sutton Way	0	1		Nevada	50	(530) 477-6961	Grocery Stores	$9,550,000	www.groceryoutlet.com	95945
+14	Ridgecrest	Vons	CA	930 N Norma St	0	1		Kern	50	(760) 446-5587	Grocery Stores	$9,550,000	www.vons.com	93555
+15	Beverly Hills	Veev Spirits LLC	CA	2631 Hutton Dr	0	1	8	Los Angeles	11	(310) 247-8785	Liquors Wholesale	$9,383,000	www.veevlife.com	90210
+16	Berkeley	Kermit Lynch Wine Merchant	CA	830 Cedar St	0	1		Alameda	11	(510) 524-1686	Wines Wholesale	$9,383,000	www.kermitlynch.com	94710
+17	Blythe	Lovekin Liquor & Deli	CA	310 S Lovekin Blvd	0	1	42	Riverside	14	(760) 922-8500	Gas Stations	$9,310,000	www.valero.com	92225
+18	Santa Barbara	Daniel Bryant Youth & Family Treatment Center	CA	1111 Garden St	0	1	14	Santa Barbara	23	(805) 730-7575	Alcohol Wholesale	$9,200,000	www.cadasb.org	93101
+19	Mira Loma	Galleano Winery Inc	CA	4231 Wineville Ave	0	1	81	Riverside	15	(951) 685-5376	Wines, Brandy & Brandy Spirits - Mfg	$9,135,000	galleanowwinery.com	91752
+20	Rutherford	Nickel & Nickel Vineyards	CA	8164 Saint Helena Hwy	0	1	4	Napa	15	(707) 967-9600	Wine Manufacturers	$9,135,000	nickelandnickel.com	94573
+21	Santa Maria	Cottonwood Canyon Vineyard & Winery	CA	3940 Dominion Rd	0	1	26	Santa Barbara	15	(805) 937-8463	Wine Manufacturers	$9,135,000	cottonwoodcanyong.com	93454
+22	Lompoc	Melville Vineyards & Winery	CA	5185 E Highway 246	0	1	25	Santa Barbara	15	(805) 735-7030	Wine Manufacturers	$9,135,000	melvillewinery.com	93436
+23	Sonoma	Schug Carneros Estate Winery	CA	602 Bonneau Rd	0	1	34	Sonoma	15	(707) 939-9363	Wine Manufacturers	$9,135,000	schugwinery.com	95476
+24	Petaluma	Keller Estate Winery	CA	5875 Lakeville Hwy	0	1	20	Sonoma	15	(707) 765-2117	Wine Manufacturers	$9,135,000	kellerestate.com	94954
+25	Long Beach	Oregon Liquor Junior Market	CA	734 W Willow St	0	1	10	Los Angeles	12	(562) 424-6639	Rolling, Drawing & Extruding of Nonferrous Metals (Except Copper)	$9,000,000	plus.google.com/110654144832732735719/about	90806
+26	Calexico	Baja Duty Free	CA	245 S Imperial Ave	0	1		Imperial	35	(760) 357-7500	Liquor Stores	$8,995,000	www.bajadutyfree.com	92231
+27	Paso Robles	Cregors	CA	611 Spring St	0	1	25	San Luis Obispo	35	(805) 239-1917	Liquor Stores	$8,995,000	plus.google.com/110960085543631204136/about	93446
+28	San Bernardino	Food 4 Less	CA	555 W 2nd St Ste A	0	1		San Bernardino	47	(909) 888-5654	Grocery Stores	$8,977,000	www.food4less.com	92401
+29	Anaheim	Stater Bros Markets	CA	1741 N Kellogg Dr	0	1		Orange	47	(714) 779-2020	Grocery Stores	$8,977,000	www.staterbros.com	92807
+30	Lakeside	Vons	CA	12419 Woodside Ave	0	1		San Diego	47	(619) 443-6811	Grocery Stores	$8,977,000	www.vons.com	92040
+31	Ventura	Ralphs	CA	9372 Telephone Rd	0	1		Ventura	46	(805) 647-7728	Grocery Stores	$8,786,000	www.ralphs.com	93004
+32	Redlands	Food 4 Less	CA	2070 W Redlands Blvd	0	1		San Bernardino	46	(909) 793-0722	Grocery Stores	$8,786,000	www.food4less.com	92373
+33	Altadena	Ralphs	CA	2270 Lake Ave	0	1		Los Angeles	46	(626) 794-1175	Grocery Stores	$8,786,000	www.ralphs.com	91001
+34	Redondo Beach	Vons	CA	245 Palos Verdes Blvd	0	1		Los Angeles	46	(310) 378-7434	Grocery Stores	$8,786,000	www.vons.com	90277
+35	Yucca Valley	Food 4 Less	CA	57200 29 Palms Hwy	0	1		San Bernardino	45	(760) 365-9429	Grocery Stores	$8,595,000	www.food4less.com	92284
+36	Oakland	J J Buckley Fine Wines	CA	7305 Edgewater Dr Ste D	0	1	8	Alameda	33	(510) 632-5500	Wines	$8,481,000	www.jjbuckley.com	94621
+37	Ukiah	Parducci Wine	CA	501 Parducci Rd	0	1		Mendocino	33	(707) 463-5378	Wines	$8,481,000	www.parducci.com	95482
+38	Bakersfield	Tam O'Shanter Wines & Spirits	CA	2401 Alta Vista Dr	0	1		Kern	33	(661) 323-0520	Liquor Stores	$8,481,000	plus.google.com/101354483632706524910/about	93305
+39	Wrightwood	Jensens Finest Foods	CA	1340 Highway 2	0	1		San Bernardino	44	(760) 249-3322	Grocery Stores	$8,404,000	www.jensensfoods.com	92397
+40	Maywood	Food 4 Less	CA	4400 Slauson Ave	0	1		Los Angeles	44	(323) 773-2214	Grocery Stores	$8,404,000	www.food4less.com	90270
+41	Los Alamitos	Vons	CA	11322 Los Alamitos Blvd	0	1		Orange	44	(562) 493-3567	Grocery Stores	$8,404,000	www.vons.com	90720
+42	Norwalk	Stater Bros Markets	CA	12523 Alondra Blvd	0	1		Los Angeles	44	(562) 921-3908	Grocery Stores	$8,404,000	www.staterbros.com	90650
+43	West Covina	Stater Bros Markets	CA	1025 E Amar Rd	0	1		Los Angeles	44	(626) 968-6005	Grocery Stores	$8,404,000	www.staterbros.com	91792
+44	Rowland Heights	Stater Bros Markets	CA	19746 Colima Rd	0	1		Los Angeles	44	(909) 598-6619	Grocery Stores	$8,404,000	www.staterbros.com	91748
+45	Burlingame	Lunardi Foods	CA	1825 El Camino Real	0	1	11	San Mateo	44	(650) 697-5306	Grocery Stores	$8,404,000	www.lunardis.com	94010
+46	Ceres	Food 4 Less	CA	1561 Mitchell Rd	0	1		Stanislaus	44	(209) 537-0200	Grocery Stores	$8,404,000	www.food4less.com	95307
+47	Selma	Food 4 Less	CA	2819 Highland Ave	0	1		Fresno	44	(559) 891-2361	Grocery Stores	$8,404,000	www.food4less.com	93662
+48	Nice	North Shore Sentry	CA	2265 E State Hwy 20	0	1		Lake	44	(707) 274-0127	Grocery Stores	$8,404,000	0	95464
+49	Modesto	Save Mart	CA	1600 Yosemite Blvd	0	1		Stanislaus	44	(209) 574-6275	Grocery Stores	$8,404,000	www.savemart.com	95354
+50	Ontario	Icee	CA	4841 E Airport Dr	0	1	18	San Bernardino	19	(909) 605-6463	Beverage Dispensing Equipment Supplies Wholesale	$8,284,000	www.icee.com	91761
+51	San Dimas	Stater Bros Markets	CA	1425 W Arrow Hwy	0	1		Los Angeles	42	(909) 599-1374	Grocery Stores	$8,022,000	www.staterbros.com	91773
+52	Carlsbad	Witch Creek Winery	CA	2906 Carlsbad Blvd	0	1		San Diego	13	(760) 765-2023	Wine Manufacturers	$7,917,000	witchcreekwinery.com	92008
+53	Healdsburg	Ramey Wine Cellars	CA	202 Haydon St	0	1		Sonoma	13	(707) 473-9167	Wine Manufacturers	$7,917,000	rameywine.com	95448
+54	Somerset	Toogood Winery	CA	7280 Fairplay Rd	0	1		El Dorado	13	(530) 620-1910	Wine Manufacturers	$7,917,000	toogoodwinery.com	95684
+55	Saint Helena	Hall Wines	CA	401 Saint Helena Hwy S Ste S	0	1	20	Napa	13	(707) 967-2620	Wine Manufacturers	$7,917,000	hallwines.com	94574
+56	Geyserville	Stryker Winery	CA	5110 Highway 128	0	1	38	Sonoma	13	(707) 433-1944	Wines, Brandy & Brandy Spirits - Mfg	$7,917,000	strykersonoma.com	95441
+57	Los Olivos	Curtis Winery	CA	5249 Foxen Canyon Rd	0	1	8	Santa Barbara	13	(805) 686-8999	Wine Manufacturers	$7,917,000	curtiswinery.com	93441
+58	Nevada City	Nevada City Winery	CA	321 Spring St	0	1	34	Nevada	13	(530) 265-9463	Wine Manufacturers	$7,917,000	ncwinery.com	95959
+59	Santa Rosa	Hanna Winery	CA	5345 Occidental Rd	0	1		Sonoma	13	(707) 575-3409	Wine Manufacturers	$7,917,000	hannawinery.com	95401
+60	Paso Robles	Tablas Creek Vineyard	CA	9339 Adelaida Rd	0	1	24	San Luis Obispo	13	(805) 237-1231	Wine Manufacturers	$7,917,000	tablascreek.com	93446
+61	Moreno Valley	Stater Bros Markets	CA	11875 Pigeon Pass Rd	0	1	0	Riverside	41	(951) 924-2575	Grocery Stores	$7,831,000	www.staterbros.com	92557
+62	Mira Loma	Vons	CA	432 Fair Oaks Ave	0	1	0	Riverside	41	(951) 427-3219	Grocery Stores	$7,831,000	www.vons.com	91752
+63	Carson	Saddle Springs Inc	CA	20700 Belshaw Ave	0	1	18	Los Angeles	10	(310) 782-9898	Soft Drink Products Mfg	$7,750,000	saddlesprings.com	90746
+64	Walnut Creek	Bevmo!	CA	2940 N Main St	0	1		Contra Costa	30	(925) 472-0130	Liquor Stores	$7,710,000	0	94597
+65	Los Olivos	Zaca Mesa Winery	CA	6905 Foxen Canyon Rd	0	1	36	Santa Barbara	30	(805) 688-9339	Tasting Rooms	$7,710,000	www.zacamesa.com	93441
+66	San Francisco	Rare Breed Distilling LLC	CA	55 Francisco St Ste 100	0	1		San Francisco	30	(415) 315-8060	Liquor Stores	$7,710,000	plus.google.com/110648528273559924831/about	94133
+67	San Francisco	Grenier Wholesale Liquor	CA	1500 Tennessee St	0	1	49	San Francisco	9	(415) 285-7100	Liquors Wholesale	$7,677,000	www.grenierliquor.com	94107
+68	Camarillo	Ralphs	CA	674 Las Posas Rd	0	1		Ventura	40	(805) 388-1781	Grocery Stores	$7,640,000	www.ralphs.com	93010
+69	Ventura	Vons	CA	2764 E Thompson Blvd	0	1		Ventura	40	(805) 648-0251	Grocery Stores	$7,640,000	www.vons.com	93003
+70	Thousand Oaks	Vons	CA	0	0	1		Ventura	40	(805) 449-9287	Grocery Stores	$7,640,000	www.vons.com	91362
+71	Oxnard	Vons	CA	1291 S Victoria Ave	0	1		Ventura	40	(805) 984-0651	Grocery Stores	$7,640,000	www.vons.com	93035
+72	Riverside	Stater Bros Markets	CA	3420 La Sierra Ave	0	1		Riverside	40	(951) 343-3015	Grocery Stores	$7,640,000	www.staterbros.com	92503
+73	Riverside	Stater Bros Markets	CA	4680 La Sierra Ave	0	1		Riverside	40	(951) 343-2581	Grocery Stores	$7,640,000	www.staterbros.com	92505
+74	Moreno Valley	Stater Bros Markets	CA	14425 Moreno Beach Dr	0	1	5	Riverside	40	(951) 242-1461	Grocery Stores	$7,640,000	www.staterbros.com	92555
+75	Riverside	Ralphs	CA	3350 La Sierra Ave	0	1		Riverside	40	(951) 637-1948	Grocery Stores	$7,640,000	www.ralphs.com	92503
+76	Fairfield	Star Gas & Liquor	CA	1369 N Texas St	0	1	31	Solano	2	(707) 422-8366	Gas Stations	$1,330,000	plus.google.com/111246000013038337657/about	94533
+77	Bakersfield	Olive Drive Liquors	CA	5302 Olive Dr	0	1	67	Kern	2	(661) 399-3774	Gas Stations	$1,330,000	www.shell.com	93308
+78	Delano	Galleria Chevron & King's Liqr	CA	906 Fremont St	0	1		Kern	2	(661) 725-7372	Alternative Fuels	$1,330,000	www.chevron.com	93215
+79	Auburn	Atwood Liquor & Deli	CA	11856 Atwood Rd	0	1	30	Placer	13	(530) 885-5540	Delicatessens	$1,300,000	plus.google.com/108290204846571647924/about	95603
+80	Santa Monica	Private Wine Counsel	CA	1640 5th St Ste 127	0	1	4	Los Angeles	7	(310) 899-1122	Wine Consultants	$1,295,000	0	90401
+81	San Mateo	Full Circle Wine Solutions Inc	CA	1670 S Amphlett Blvd Ste 120	0	1		San Mateo	7	(650) 654-2615	Wine Consultants	$1,295,000	plus.google.com/100188662471262456122/about	94402
+82	San Francisco	Wine Merchant of Show Place Square	CA	2 Henry Adams St Ste 21	0	1		San Francisco	7	(415) 864-8466	Wine Consultants	$1,295,000	plus.google.com/114575461105295163193/about	94103
+83	Ojai	Regal Wine & Cheese	CA	655 E Ojai Ave Frnt	0	1		Ventura	5	(805) 646-2500	Liquor Stores	$1,285,000	0	93023
+84	Ojai	Red Barn Liquor	CA	11558 N Ventura Ave	0	1	26	Ventura	5	(805) 646-5445	Liquor Stores	$1,285,000	0	93023
+85	Piru	Piru Market & Liquor Store	CA	981 N Main St	0	1		Ventura	5	(805) 521-1490	Liquor Stores	$1,285,000	0	93040
+86	Somis	Somis General Store	CA	3335 Somis Rd	0	1		Ventura	5	(805) 386-2000	Liquor Stores	$1,285,000	plus.google.com/100259346127012950735/about	93066
+87	Ventura	Bevmo!	CA	103 S Mills Rd	0	1		Ventura	5	(805) 642-7317	Liquor Stores	$1,285,000	0	93003
+88	Simi Valley	D & A House Of Wine & Liquor	CA	2345 Erringer Rd Ste 110	0	1	33	Ventura	5	(805) 522-7979	Liquor Stores	$1,285,000	plus.google.com/113559900825500991861/about	93065
+89	Ojai	Pats Liquor	CA	710 E Ojai Ave	0	1	69	Ventura	5	(805) 646-1160	Liquor Stores	$1,285,000	plus.google.com/103491538627511452021/about	93023
+90	Ventura	Mandells Liquor & Wine Shop	CA	3915 Telegraph Rd	0	1	37	Ventura	5	(805) 642-1148	Liquor Stores	$1,285,000	0	93003
+91	Oxnard	Goodes Liquor	CA	1271 Saviers Rd	0	1	31	Ventura	5	(805) 486-4816	Liquor Stores	$1,285,000	plus.google.com/110903455216062276789/about	93033
+92	Ojai	Attitude Adjustment Shop	CA	1129 Maricopa Hwy	0	1	49	Ventura	5	(805) 646-1109	Liquor Stores	$1,285,000	www.attitudeadjustmentshop.com	93023
+93	Camarillo	Cork & Bottle Liquor & Delis	CA	1904 Ventura Blvd	0	1	49	Ventura	5	(805) 482-2130	Liquor Stores	$1,285,000	plus.google.com/101274885625767189960/about	93010
+94	Camarillo	Liquor Shop	CA	2277 Las Posas Rd	0	1		Ventura	5	(805) 482-9997	Liquor Stores	$1,285,000	0	93010
+95	Camarillo	Bevmo!	CA	135 W Ventura Blvd	0	1		Ventura	5	(805) 437-1772	Liquor Stores	$1,285,000	www.bevmo.com	93010
+96	Port Hueneme	Alan's Liquor	CA	2521 N Ventura Rd	0	1		Ventura	5	(805) 984-7333	Liquor Stores	$1,285,000	0	93041
+97	Ventura	Surf Liquor	CA	1050 S Seaward Ave	0	1	21	Ventura	5	(805) 648-6452	Liquor Stores	$1,285,000	plus.google.com/113688123111640179120/about	93001
+98	Ojai	Casa Barranca Tasting Room	CA	208 E Ojai Ave	0	1		Ventura	5	(805) 640-1255	Tasting Rooms	$1,285,000	www.casabarranca.com	93023
+99	Moorpark	JM Wine & Liquor	CA	559 New Los Angeles Ave	0	1	2	Ventura	5	(805) 529-5847	Liquor Stores	$1,285,000	plus.google.com/114524050081090119198/about	93021
+100	Moorpark	Premier Cru Wine Cellars	CA	5260 Bonsai St	0	1	1	Ventura	5	(805) 530-1185	Liquor Stores	$1,285,000	www.pcwinecellars.com	93021

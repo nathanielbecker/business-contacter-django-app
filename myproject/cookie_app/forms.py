@@ -1,11 +1,11 @@
 from django import forms
-from .models import barebones_CRUD
+from .models import Initial_Borr_List_Page
 from django.contrib import admin
 
 
-class barebones_CRUDForm(forms.ModelForm):
+class Initial_Borr_List_PageForm(forms.ModelForm):
     class Meta:
-        model = barebones_CRUD
+        model = Initial_Borr_List_Page
 
 ####customize form labeling, from http://stackoverflow.com/questions/5414853/customize-select-in-django-admin
 class barebonesAdminForm(forms.ModelForm):
