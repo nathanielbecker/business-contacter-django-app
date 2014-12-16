@@ -1,5 +1,5 @@
 *.sqlite3
-
+*.csv
 
 #####boiler-plate python .gitignore text (from https://github.com/github/gitignore/blob/master/Python.gitignore)
 

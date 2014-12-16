@@ -5,7 +5,7 @@ from .models import Initial_Borr_List_Page
 
 ##you added this
 from django.http import HttpResponse
-from django.shortcuts import render ##this is for django_tables2
+# from django.shortcuts import render ##this is for django_tables2
 from tablify import SimpleTable
 from django.template import RequestContext, loader
 from django.shortcuts import render_to_response

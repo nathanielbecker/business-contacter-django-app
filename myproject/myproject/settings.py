@@ -40,6 +40,7 @@ INSTALLED_APPS = (
     'cookie_app',
     'bootstrap3',
     'django_tables2',
+    'csvimport.app.CSVImportConf',
 )
 
 MIDDLEWARE_CLASSES = (

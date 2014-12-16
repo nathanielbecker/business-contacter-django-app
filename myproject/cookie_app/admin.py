@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Initial_Borr_List_Page, DateTime
+from .models import Initial_Borr_List_Page, DateTime, More_Data_Page
 from forms import barebonesAdminForm
 
 # class ChoiceInline(admin.TabularInline):
@@ -55,9 +55,28 @@ class DateAdmin(admin.ModelAdmin):
     list_display = ["datetime"]
     inlines = [ItemInline]
 
+class More_data_page_admin(admin.ModelAdmin):
+    fields = ["FollowUp","BorrName","BorrYelpLink","BorrYelpNumReviews","BorrFacebookPage","BorrPreviousLender","BorrLastLoanDate","BorrLastLoanMaturity","BorrLoanType","BorrPhoneNumberVal","BorrLoanProb","BorrEmail","BorrWebsiteVal","BorrSquareft","BorrOwnRent"]
+    list_display = ["FollowUp","BorrName","BorrYelpLink","BorrYelpNumReviews","BorrFacebookPage","BorrPreviousLender","BorrLastLoanDate","BorrLastLoanMaturity","BorrLoanType","BorrPhoneNumberVal","BorrLoanProb","BorrEmail","BorrWebsiteVal","BorrSquareft","BorrOwnRent"]
+    #this makes data display in spreadsheet format--note there's no "Created"
+    search_fields = ["BorrName"]
+    # action_form = UpdateActionForm
+    # actions = [update_findmoredata,update_findmoredata_neg]
+    list_filter = ('BorrOwnRent',)
+    # form = barebonesAdminForm ##customizes form, from http://stackoverflow.com/questions/5414853/customize-select-in-django-admin
+
+
+
+
+
+
+
+
 
 admin.site.disable_action('delete_selected') #removes delete selected action--see http://stackoverflow.com/questions/1565812/the-default-delete-selected-admin-action-in-django
 
 admin.site.register(Initial_Borr_List_Page,barebones_admin)
 admin.site.register(DateTime, DateAdmin)
+admin.site.register(More_Data_Page, More_data_page_admin)
+
 

@@ -51,7 +51,7 @@ class More_Data_Page(models.Model):
 	def __str__(self):
 		return self.BorrName
 	def get_absolute_url(self):
-		return reverse('Initial_Borr_List_Page_detail', args=[str(self.id)])
+		return reverse('More_Data_Page_detail', args=[str(self.id)])
 
 
 
