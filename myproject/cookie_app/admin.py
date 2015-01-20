@@ -1,6 +1,6 @@
 from django.contrib import admin
 from .models import Initial_Borr_List_Page, DateTime, More_Data_Page
-from forms import barebonesAdminForm
+# from forms import barebonesAdminForm
 
 # class ChoiceInline(admin.TabularInline):
 #     model = Initial_Borr_List_Page
@@ -10,10 +10,10 @@ from forms import barebonesAdminForm
 from django.contrib.admin.helpers import ActionForm
 from django import forms
 
-# class UpdateActionForm(ActionForm): ###this produces little check boxes next to the action dropdown 
+# class UpdateActionForm(ActionForm): ###this produces little check boxes next to the action dropdown
 #     # FollowUp = forms.BooleanField(required=False)
 #     FindMoreData = forms.BooleanField(required=False)
-   
+
 
 # def update_followup(modeladmin, request, queryset):
 #     FollowUp = request.POST.get('FollowUp', True) #needs a default value
@@ -30,11 +30,26 @@ def update_findmoredata(modeladmin, request, queryset):# add businesses to FindM
 update_findmoredata.short_description = "Find More Information on these Businesses"
 
 def update_findmoredata_neg(modeladmin, request, queryset):# remove businesses from FindMoreData
-    FindMoreData = request.POST.get('FindMoreData', False) #needs a default value 
+    FindMoreData = request.POST.get('FindMoreData', False) #needs a default value
     FindMoreData = bool(FindMoreData)
     queryset.update(FindMoreData=FindMoreData)
     modeladmin.message_user(request, ("Will No Longer Find More Information on these  %d Businesses") % (queryset.count(),)) #, messages.SUCCESS
 update_findmoredata_neg.short_description = "Don't Find More Information on these Businesses"
+
+def update_followup(modeladmin, request, queryset):# add businesses to FollowUp
+    FollowUp = request.POST.get('FollowUp', True) #needs a default value
+    FollowUp = bool(FollowUp)
+    queryset.update(FollowUp=FollowUp)
+    modeladmin.message_user(request, ("Will Contact these %d Businesses") % (queryset.count(),)) #, messages.SUCCESS
+update_followup.short_description = "Contact these Businesses"
+
+def update_followup_neg(modeladmin, request, queryset):# remove businesses from FollowUp
+    FollowUp = request.POST.get('FollowUp', False) #needs a default value
+    FollowUp = bool(FollowUp)
+    queryset.update(FollowUp=FollowUp)
+    modeladmin.message_user(request, ("Will No Longer Contact these %d Businesses") % (queryset.count(),)) #, messages.SUCCESS
+update_followup_neg.short_description = "Don't Contact these Businesses"
+
 
 ######
 
@@ -46,7 +61,11 @@ class barebones_admin(admin.ModelAdmin):
     # action_form = UpdateActionForm
     actions = [update_findmoredata,update_findmoredata_neg]
     list_filter = ('BorrSICName',)
-    form = barebonesAdminForm ##customizes form, from http://stackoverflow.com/questions/5414853/customize-select-in-django-admin
+    # form = barebonesAdminForm ##customizes form, from http://stackoverflow.com/questions/5414853/customize-select-in-django-admin
+    actions_on_top=True
+    actions_on_bottom=False
+    def has_add_permission(self, request):###removes big add button
+        return False
 
 class ItemInline(admin.TabularInline):
     model = Initial_Borr_List_Page
@@ -56,15 +75,17 @@ class DateAdmin(admin.ModelAdmin):
     inlines = [ItemInline]
 
 class More_data_page_admin(admin.ModelAdmin):
-    fields = ["FollowUp","BorrName","BorrYelpLink","BorrYelpNumReviews","BorrFacebookPage","BorrPreviousLender","BorrLastLoanDate","BorrLastLoanMaturity","BorrLoanType","BorrPhoneNumberVal","BorrLoanProb","BorrEmail","BorrWebsiteVal","BorrSquareft","BorrOwnRent"]
-    list_display = ["FollowUp","BorrName","BorrYelpLink","BorrYelpNumReviews","BorrFacebookPage","BorrPreviousLender","BorrLastLoanDate","BorrLastLoanMaturity","BorrLoanType","BorrPhoneNumberVal","BorrLoanProb","BorrEmail","BorrWebsiteVal","BorrSquareft","BorrOwnRent"]
+    fields = ["FollowUp","BorrName","BorrOwnerName","BorrYelpLink","BorrYelpNumReviews","BorrFacebookPage","BorrPreviousLender","BorrLastLoanDate","BorrLastLoanMaturity","BorrLoanType","BorrPhoneNumberVal","BorrLoanProb","BorrEmail","BorrWebsiteVal","BorrSquareft","BorrOwnRent"]
+    list_display = ["FollowUp","BorrName","BorrOwnerName","BorrYelpLink","BorrFacebookPage","BorrLastLoanDate","BorrPhoneNumberVal","BorrLoanProb","BorrWebsiteVal","BorrSquareft","BorrOwnRent"]####"BorrYelpLink","BorrYelpNumReviews",
     #this makes data display in spreadsheet format--note there's no "Created"
     search_fields = ["BorrName"]
-    # action_form = UpdateActionForm
-    # actions = [update_findmoredata,update_findmoredata_neg]
-    list_filter = ('BorrOwnRent',)
+    actions = [update_followup,update_followup_neg]
+    list_filter = ('BorrOwnRent',"BorrSquareft")
     # form = barebonesAdminForm ##customizes form, from http://stackoverflow.com/questions/5414853/customize-select-in-django-admin
-
+    actions_on_top=True
+    actions_on_bottom=False
+    def has_add_permission(self, request):###removes big add button
+        return False
 
 
 
