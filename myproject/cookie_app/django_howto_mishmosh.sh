@@ -89,9 +89,6 @@ find . -name 'change_list.html'
 
 git push -u origin master
 
-####install django suit
-pip install django-suit
-
 #####login for Angela Machado
 amachado
 celtic
@@ -106,3 +103,5 @@ insert into cookie_app_initial_borr_list_page select * from deleter;
 
 
 
+####install django suit
+pip install django-suit

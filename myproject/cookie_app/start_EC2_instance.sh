@@ -23,6 +23,12 @@ sudo pip install django-floppyforms
 sudo pip install django-bootstrap3
 sudo pip install django-tables2
 
-/home/ubuntu/siter/business-contacter-django-app/myproject
-
+./manage.py collectstatic
 sudo service apache2 restart
+
+####move db file to ec2 server
+sudo scp -i ~/Desktop/key_pair_CA_2.pem db.sqlite3 ubuntu@ec2-54-153-72-36.us-west-1.compute.amazonaws.com:~/.
+
+
+sudo chown www-data myproject/
+sudo chown www-data myproject/db.sqlite3
