@@ -27,6 +27,6 @@ urlpatterns = patterns(
     # url(r'^tablify/?$', views.tablify, name='tablify'),
 )
 
-admin.site.site_header = 'Pareto Data Systems'
-admin.site.site_title = 'Pareto Data Systems'
-admin.site.index_title = 'Pareto Data Systems'
+admin.site.site_header = 'Quantile'
+admin.site.site_title = 'Quantile'
+admin.site.index_title = 'Quantile'

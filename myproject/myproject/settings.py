@@ -26,6 +26,9 @@ TEMPLATE_DEBUG = True
 
 ALLOWED_HOSTS = []
 
+TEMPLATE_DIRS = (
+    '/Users/natebecker/.virtualenvs/venv_address_booker/startover/myproject/cookie_app/templates',
+)
 
 # Application definition
 
@@ -103,7 +106,7 @@ TEMPLATE_CONTEXT_PROCESSORS += ('django.core.context_processors.request',)
 
 SUIT_CONFIG = {
     # header
-    'ADMIN_NAME': 'Pareto Data Systems',
+    'ADMIN_NAME': 'Quantile',
     # 'HEADER_DATE_FORMAT': 'l, j. F Y',
     # 'HEADER_TIME_FORMAT': 'H:i',
 

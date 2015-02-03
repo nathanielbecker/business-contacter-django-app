@@ -54,18 +54,21 @@ update_followup_neg.short_description = "Don't Contact these Businesses"
 ######
 
 class barebones_admin(admin.ModelAdmin):
-    fields = ["FindMoreData","BorrName","BorrStreet","BorrState","BorrCity","BorrZip","BorrCounty","BorrPhoneNumber","BorrWebsite","BorrEmployees","BorrSales","BorrAge","BorrSICName","Created"]
-    list_display = ["FindMoreData","BorrName","BorrSICName","BorrStreet","BorrState","BorrCity","BorrState","BorrEmployees","BorrSales","BorrAge"]
+    # fields = ['AtoZ_ID', 'BankName', 'Business_Name', 'checkins', 'Est_Rent_Annual_Expense', 'executivedetails', 'final_phone', 'first_loan_date', 'Franchise', 'InitialInterestRate', 'last_loan_date', 'last_loan_end', 'likes', 'link', 'final_employees', 'Main_Line_of_Business', 'Manufacturer', 'NaicsDescription', 'num_loans', 'ownsrentsindicator', 'Physical_City', 'Physical_State', 'Physical_ZIP', 'rating', 'Revenue_Yr', 'review_count', 'Square_Footage', 'street3', 'sum_loans', 'Website', 'X2013_Employees', 'X2013_Revenue_Yr', 'final_yr_incorporated', 'url', 'Created', 'FindMoreData']
+    list_display = ['FindMoreData', 'Business_Name', 'Est_Rent_Annual_Expense','website_link', 'final_employees', 'Main_Line_of_Business', 'ownsrentsindicator', 'street3', 'Physical_City', 'Physical_State', 'Physical_ZIP', 'Revenue_Yr']
     #this makes data display in spreadsheet format--note there's no "Created"
-    search_fields = ["BorrName"]
+    search_fields = ["Business_Name",'Main_Line_of_Business']
     # action_form = UpdateActionForm
     actions = [update_findmoredata,update_findmoredata_neg]
-    list_filter = ('BorrSICName',)
+    list_filter = ('ownsrentsindicator','Physical_State')
     # form = barebonesAdminForm ##customizes form, from http://stackoverflow.com/questions/5414853/customize-select-in-django-admin
     actions_on_top=True
     actions_on_bottom=False
     def has_add_permission(self, request):###removes big add button
         return False
+    def website_link(self, obj):###highlight links--from http://stackoverflow.com/questions/1949248/how-to-add-clickable-links-to-a-field-in-django-admin
+        return '<a href="%s">%s</a>' % (obj.Website, obj.Website)
+    website_link.allow_tags = True
 
 class ItemInline(admin.TabularInline):
     model = Initial_Borr_List_Page
@@ -75,17 +78,27 @@ class DateAdmin(admin.ModelAdmin):
     inlines = [ItemInline]
 
 class More_data_page_admin(admin.ModelAdmin):
-    fields = ["FollowUp","BorrName","BorrOwnerName","BorrYelpLink","BorrYelpNumReviews","BorrFacebookPage","BorrPreviousLender","BorrLastLoanDate","BorrLastLoanMaturity","BorrLoanType","BorrPhoneNumberVal","BorrLoanProb","BorrEmail","BorrWebsiteVal","BorrSquareft","BorrOwnRent"]
-    list_display = ["FollowUp","BorrName","BorrOwnerName","BorrYelpLink","BorrFacebookPage","BorrLastLoanDate","BorrPhoneNumberVal","BorrLoanProb","BorrWebsiteVal","BorrSquareft","BorrOwnRent"]####"BorrYelpLink","BorrYelpNumReviews",
+    fields = ["FollowUp",'AtoZ_ID', 'BankName', 'Business_Name', 'checkins', 'Est_Rent_Annual_Expense', 'executivedetails', 'final_phone', 'first_loan_date', 'Franchise', 'InitialInterestRate', 'last_loan_date', 'last_loan_end', 'likes', 'link', 'final_employees', 'Main_Line_of_Business', 'Manufacturer', 'NaicsDescription', 'num_loans', 'ownsrentsindicator', 'Physical_City', 'Physical_State', 'Physical_ZIP', 'rating', 'Revenue_Yr', 'review_count', 'Square_Footage', 'street3', 'sum_loans', 'Website', 'X2013_Employees', 'X2013_Revenue_Yr', 'final_yr_incorporated', 'url', 'Created']
+    list_display = ['FollowUp', 'Business_Name', 'centile' , 'Main_Line_of_Business','Physical_City', 'num_loans', 'sum_loans', 'first_loan_date', 'last_loan_date', 'InitialInterestRate', 'BankName', 'executivedetails', 'Revenue_Yr',  'final_employees', 'ownsrentsindicator', 'Square_Footage', 'Est_Rent_Annual_Expense', 'website_link', 'checkins', 'likes', 'facebook_link' ,'rating',  'review_count',  'yelp_link']####"BorrYelpLink","BorrYelpNumReviews",
     #this makes data display in spreadsheet format--note there's no "Created"
-    search_fields = ["BorrName"]
+    search_fields = ["Business_Name",'Main_Line_of_Business']
     actions = [update_followup,update_followup_neg]
-    list_filter = ('BorrOwnRent',"BorrSquareft")
+    list_filter = ('ownsrentsindicator', 'Square_Footage')
     # form = barebonesAdminForm ##customizes form, from http://stackoverflow.com/questions/5414853/customize-select-in-django-admin
     actions_on_top=True
     actions_on_bottom=False
     def has_add_permission(self, request):###removes big add button
         return False
+    def yelp_link(self, obj):###highlight links--from http://stackoverflow.com/questions/1949248/how-to-add-clickable-links-to-a-field-in-django-admin
+        return '<a href="%s">%s</a>' % (obj.url, obj.url)
+    yelp_link.allow_tags = True
+    # show_url.short_description = "Yelp Link"
+    def facebook_link(self, obj):###highlight links--from http://stackoverflow.com/questions/1949248/how-to-add-clickable-links-to-a-field-in-django-admin
+        return '<a href="%s">%s</a>' % (obj.link, obj.link)
+    facebook_link.allow_tags = True
+    def website_link(self, obj):###highlight links--from http://stackoverflow.com/questions/1949248/how-to-add-clickable-links-to-a-field-in-django-admin
+        return '<a href="%s">%s</a>' % (obj.Website, obj.Website)
+    website_link.allow_tags = True
 
 
 
@@ -101,3 +114,30 @@ admin.site.register(DateTime, DateAdmin)
 admin.site.register(More_Data_Page, More_data_page_admin)
 
 
+
+# backup incase data migration goes shitty 1/29
+# class barebones_admin(admin.ModelAdmin):
+#     fields = ["FindMoreData","BorrName","BorrStreet","BorrState","BorrCity","BorrZip","BorrCounty","BorrPhoneNumber","BorrWebsite","BorrEmployees","BorrSales","BorrAge","BorrSICName","Created"]
+#     list_display = ["FindMoreData","BorrName","BorrSICName","BorrStreet","BorrState","BorrCity","BorrState","BorrEmployees","BorrSales","BorrAge"]
+#     #this makes data display in spreadsheet format--note there's no "Created"
+#     search_fields = ["BorrName"]
+#     # action_form = UpdateActionForm
+#     actions = [update_findmoredata,update_findmoredata_neg]
+#     list_filter = ('BorrSICName',)
+#     # form = barebonesAdminForm ##customizes form, from http://stackoverflow.com/questions/5414853/customize-select-in-django-admin
+#     actions_on_top=True
+#     actions_on_bottom=False
+#     def has_add_permission(self, request):###removes big add button
+#         return False
+# class More_data_page_admin(admin.ModelAdmin):
+#     fields = ["FollowUp","BorrName","BorrOwnerName","BorrYelpLink","BorrYelpNumReviews","BorrFacebookPage","BorrPreviousLender","BorrLastLoanDate","BorrLastLoanMaturity","BorrLoanType","BorrPhoneNumberVal","BorrLoanProb","BorrEmail","BorrWebsiteVal","BorrSquareft","BorrOwnRent"]
+#     list_display = ["FollowUp","BorrName","BorrOwnerName","BorrYelpLink","BorrFacebookPage","BorrLastLoanDate","BorrPhoneNumberVal","BorrLoanProb","BorrWebsiteVal","BorrSquareft","BorrOwnRent"]####"BorrYelpLink","BorrYelpNumReviews",
+#     #this makes data display in spreadsheet format--note there's no "Created"
+#     search_fields = ["BorrName"]
+#     actions = [update_followup,update_followup_neg]
+#     list_filter = ('BorrOwnRent',"BorrSquareft")
+#     # form = barebonesAdminForm ##customizes form, from http://stackoverflow.com/questions/5414853/customize-select-in-django-admin
+#     actions_on_top=True
+#     actions_on_bottom=False
+#     def has_add_permission(self, request):###removes big add button
+#         return False
