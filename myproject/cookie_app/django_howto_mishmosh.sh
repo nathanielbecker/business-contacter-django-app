@@ -28,7 +28,6 @@ sudo apt-get install git
 django-admin.py startproject testproject
 
 sudo vim /etc/apache2/sites-enabled/test_site.com.conf
-
 sudo vim ~/etc/apache2/sites-enabled/address_book_test
 
 python manage.py startapp address_booker
@@ -40,8 +39,6 @@ cookiecutter https://github.com/wildfish/cookiecutter-django-crud.git
 pip install django-floppyforms
 
 find . -name 'floppyforms'
-
-
 
 # add shit to your settings.py in the parent project folder
 
@@ -92,6 +89,8 @@ find . -name 'change_list.html'
 
 git push -u origin master
 
+####install django suit
+pip install django-suit
 
 #####login for Angela Machado
 amachado
@@ -104,3 +103,6 @@ drop table deleter;
 create table deleter as select * from cookie_app_initial_borr_list_page order by random();
 delete from cookie_app_initial_borr_list_page;
 insert into cookie_app_initial_borr_list_page select * from deleter;
+
+
+

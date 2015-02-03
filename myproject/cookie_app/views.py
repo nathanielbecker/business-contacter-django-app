@@ -1,5 +1,5 @@
 from django.core.urlresolvers import reverse_lazy
-from vanilla import ListView, CreateView, DetailView, UpdateView, DeleteView
+# from vanilla import ListView, CreateView, DetailView, UpdateView, DeleteView
 # from .forms import Initial_Borr_List_PageForm, More_Data_PageForm
 from .models import Initial_Borr_List_Page, More_Data_Page
 
