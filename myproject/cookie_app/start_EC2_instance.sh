@@ -16,8 +16,7 @@ cd siter
 django-admin.py startproject business_prospector
 git clone https://github.com/nathanielbecker/business-contacter-django-app.git
 sudo vim /etc/apache2/sites-enabled/siter.conf
-###modify the apache config file as per the instructions###in vim you could search/replace using
-:%s/business_prospector/myproject/g
+###modify the apache config file as per the instructions###in vim you could search/replace using ':%s/business_prospector/myproject/g'
 sudo pip install django-suit
 sudo pip install django-floppyforms
 sudo pip install django-bootstrap3

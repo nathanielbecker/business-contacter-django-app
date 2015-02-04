@@ -99,6 +99,11 @@ STATIC_URL = '/static/'
 
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')###added as per http://stackoverflow.com/questions/23215581/unable-to-perform-collectstatic
 
+STATICFILES_DIRS = (
+    os.path.join(BASE_DIR, "static"),
+    # '/var/www/static/',
+)
+
 ##########I added this for django_tables2 compatibility (see http://django-tables2.readthedocs.org/en/latest/)###also used in grappelli/django suit https://github.com/sehmaschine/django-grappelli
 from django.conf.global_settings import TEMPLATE_CONTEXT_PROCESSORS
 TEMPLATE_CONTEXT_PROCESSORS += ('django.core.context_processors.request',)
