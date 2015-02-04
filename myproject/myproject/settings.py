@@ -27,8 +27,8 @@ TEMPLATE_DEBUG = True
 ALLOWED_HOSTS = []
 
 TEMPLATE_DIRS = (
-    # '/Users/natebecker/.virtualenvs/venv_address_booker/startover/myproject/cookie_app/templates',
-    # os.path.join(BASE_DIR, '/cookie_app/templates'),
+    '/Users/natebecker/.virtualenvs/venv_address_booker/startover/myproject/cookie_app/templates',
+    os.path.join(BASE_DIR, '/cookie_app/templates'),
     '/home/ubuntu/siter/business-contacter-django-app/myproject/cookie_app/templates',
 )
 
@@ -101,7 +101,7 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'static')###added as per http://stackoverfl
 
 STATICFILES_DIRS = (
     os.path.join(BASE_DIR, "static"),
-    # '/var/www/static/',
+    '/home/ubuntu/siter/business-contacter-django-app/myproject/static',
 )
 
 ##########I added this for django_tables2 compatibility (see http://django-tables2.readthedocs.org/en/latest/)###also used in grappelli/django suit https://github.com/sehmaschine/django-grappelli
