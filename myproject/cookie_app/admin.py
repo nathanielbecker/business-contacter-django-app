@@ -50,7 +50,6 @@ def update_followup_neg(modeladmin, request, queryset):# remove businesses from 
     modeladmin.message_user(request, ("Will No Longer Contact these %d Businesses") % (queryset.count(),)) #, messages.SUCCESS
 update_followup_neg.short_description = "Don't Contact these Businesses"
 
-
 ######
 
 class barebones_admin(admin.ModelAdmin):
@@ -60,7 +59,7 @@ class barebones_admin(admin.ModelAdmin):
     search_fields = ["Business_Name",'Main_Line_of_Business']
     # action_form = UpdateActionForm
     actions = [update_findmoredata,update_findmoredata_neg]
-    list_filter = ('ownsrentsindicator','Physical_State')
+    list_filter = ('ownsrentsindicator','Est_Rent_Annual_Expense','Physical_State')
     # form = barebonesAdminForm ##customizes form, from http://stackoverflow.com/questions/5414853/customize-select-in-django-admin
     actions_on_top=True
     actions_on_bottom=False
@@ -79,11 +78,11 @@ class DateAdmin(admin.ModelAdmin):
 
 class More_data_page_admin(admin.ModelAdmin):
     fields = ["FollowUp",'AtoZ_ID', 'BankName', 'Business_Name', 'checkins', 'Est_Rent_Annual_Expense', 'executivedetails', 'final_phone', 'first_loan_date', 'Franchise', 'InitialInterestRate', 'last_loan_date', 'last_loan_end', 'likes', 'link', 'final_employees', 'Main_Line_of_Business', 'Manufacturer', 'NaicsDescription', 'num_loans', 'ownsrentsindicator', 'Physical_City', 'Physical_State', 'Physical_ZIP', 'rating', 'Revenue_Yr', 'review_count', 'Square_Footage', 'street3', 'sum_loans', 'Website', 'X2013_Employees', 'X2013_Revenue_Yr', 'final_yr_incorporated', 'url', 'Created']
-    list_display = ['FollowUp', 'Business_Name', 'centile' , 'Main_Line_of_Business','Physical_City', 'num_loans', 'sum_loans', 'first_loan_date', 'last_loan_date', 'InitialInterestRate', 'BankName', 'executivedetails', 'Revenue_Yr',  'final_employees', 'ownsrentsindicator', 'Square_Footage', 'Est_Rent_Annual_Expense', 'website_link', 'checkins', 'likes', 'facebook_link' ,'rating',  'review_count',  'yelp_link']####"BorrYelpLink","BorrYelpNumReviews",
+    list_display = ['FollowUp', 'Business_Name', 'centile' , 'Main_Line_of_Business','Physical_City', 'num_loans', 'sum_loans', 'first_loan_date', 'last_loan_date', 'last_loan_end', 'InitialInterestRate', 'BankName', 'executivedetails', 'Revenue_Yr',  'final_employees', 'ownsrentsindicator', 'Square_Footage', 'Est_Rent_Annual_Expense', 'website_link', 'checkins', 'likes', 'facebook_link' ,'rating', 'review_count',  'yelp_link']####"BorrYelpLink","BorrYelpNumReviews",
     #this makes data display in spreadsheet format--note there's no "Created"
-    search_fields = ["Business_Name",'Main_Line_of_Business']
+    search_fields = ["Business_Name",'Main_Line_of_Business','Physical_City']
     actions = [update_followup,update_followup_neg]
-    list_filter = ('ownsrentsindicator', 'Square_Footage')
+    list_filter = ('ownsrentsindicator', 'Square_Footage','Est_Rent_Annual_Expense','Physical_State')
     # form = barebonesAdminForm ##customizes form, from http://stackoverflow.com/questions/5414853/customize-select-in-django-admin
     actions_on_top=True
     actions_on_bottom=False

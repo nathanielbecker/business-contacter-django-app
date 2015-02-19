@@ -1,7 +1,7 @@
 ###http://www.nickpolet.com/blog/deploying-django-on-aws/1/
 #####how to run EC2 instance of your site:
 chmod 400 ~/Desktop/key_pair_CA_2.pem
-ssh -i ~/Desktop/key_pair_CA_2.pem ubuntu@54.153.72.36
+ssh -i ~/Desktop/key_pair_CA_2.pem ubuntu@54.67.121.75
 ########
 sudo apt-get update
 sudo apt-get install apache2 libapache2-mod-wsgi
@@ -31,3 +31,7 @@ sudo scp -i ~/Desktop/key_pair_CA_2.pem db.sqlite3 ubuntu@ec2-54-153-72-36.us-we
 
 sudo chown www-data myproject/
 sudo chown www-data myproject/db.sqlite3
+
+
+/home/ubuntu/siter/business-contacter-django-app/myproject/static
+/home/ubuntu/siter/business-contacter-django-app/myproject/media

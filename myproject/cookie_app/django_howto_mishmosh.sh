@@ -93,6 +93,10 @@ git push -u origin master
 amachado
 celtic
 
+#####login for David Coffey
+dcoffey
+ablsba
+
 ###insert statement moving initial_page stuff to next_page
 insert into cookie_app_more_data_page SELECT * FROM cookie_app_initial_borr_list_page where  centile > 95 and Physical_State = 'CA' ORDER BY RANDOM() LIMIT 100;
 
@@ -101,6 +105,7 @@ create table deleter as select * from cookie_app_initial_borr_list_page order by
 delete from cookie_app_initial_borr_list_page;
 insert into cookie_app_initial_borr_list_page select * from deleter;
 
+create table ang_backup as select * from cookie_app_more_data_page;
 
 
 ####install django suit

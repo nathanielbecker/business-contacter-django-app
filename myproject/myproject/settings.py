@@ -97,12 +97,15 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
-STATIC_ROOT = os.path.join(BASE_DIR, 'static')###added as per http://stackoverflow.com/questions/23215581/unable-to-perform-collectstatic
+# STATIC_ROOT = os.path.join(BASE_DIR, 'static')###added as per http://stackoverflow.com/questions/23215581/unable-to-perform-collectstatic
 
-STATICFILES_DIRS = (
-    os.path.join(BASE_DIR, "static"),
-    '/home/ubuntu/siter/business-contacter-django-app/myproject/static',
-)
+
+# #####note that if you uncomment this, the locally deployed website looks like what the EC2 instance has (no assets are visible)
+# STATICFILES_DIRS = (
+#     os.path.join(BASE_DIR, "static"),
+#     # '/home/ubuntu/siter/business-contacter-django-app/myproject/static',
+#     '/Users/natebecker/.virtualenvs/venv_address_booker/startover/myproject',
+# )
 
 ##########I added this for django_tables2 compatibility (see http://django-tables2.readthedocs.org/en/latest/)###also used in grappelli/django suit https://github.com/sehmaschine/django-grappelli
 from django.conf.global_settings import TEMPLATE_CONTEXT_PROCESSORS
@@ -135,7 +138,7 @@ SUIT_CONFIG = {
         'sites',
         # {'app': 'auth', 'icon':'icon-lock', 'models': ('user', 'group')},
         # {'label': 'Settings', 'icon':'icon-cog', 'models': ('auth.user', 'auth.group')},
-        {'label': 'Initial Data', 'icon':' icon-tasks', 'models': ('cookie_app.Initial_Borr_List_Page'), 'url': '/admin/cookie_app/initial_borr_list_page/'},
+        # {'label': 'Initial Data', 'icon':' icon-tasks', 'models': ('cookie_app.Initial_Borr_List_Page'), 'url': '/admin/cookie_app/initial_borr_list_page/'},####commented out to remove initial data tag
         {'label': 'Followup Data', 'icon':'icon-ok', 'models': ('cookie_app.more_data_page'),'url': '/admin/cookie_app/more_data_page/'},
         # {'label': 'Support', 'icon':'icon-question-sign', 'url': '/support/'},
     ),
