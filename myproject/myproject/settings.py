@@ -26,11 +26,11 @@ TEMPLATE_DEBUG = True
 
 ALLOWED_HOSTS = []
 
-TEMPLATE_DIRS = (
-    '/Users/natebecker/.virtualenvs/venv_address_booker/startover/myproject/cookie_app/templates',
-    os.path.join(BASE_DIR, '/cookie_app/templates'),
-    '/home/ubuntu/siter/business-contacter-django-app/myproject/cookie_app/templates',
-)
+# TEMPLATE_DIRS = (
+#     '/Users/natebecker/.virtualenvs/venv_address_booker/startover/myproject/cookie_app/templates',
+#     os.path.join(BASE_DIR, '/cookie_app/templates'),
+#     '/home/ubuntu/siter/business-contacter-django-app/myproject/cookie_app/templates',
+# )
 
 # Application definition
 
@@ -97,13 +97,12 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
-# STATIC_ROOT = os.path.join(BASE_DIR, 'static')###added as per http://stackoverflow.com/questions/23215581/unable-to-perform-collectstatic
-
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')###added as per http://stackoverflow.com/questions/23215581/unable-to-perform-collectstatic
 
 # #####note that if you uncomment this, the locally deployed website looks like what the EC2 instance has (no assets are visible)
 # STATICFILES_DIRS = (
 #     os.path.join(BASE_DIR, "static"),
-#     # '/home/ubuntu/siter/business-contacter-django-app/myproject/static',
+#     '/home/ubuntu/siter/business-contacter-django-app/myproject/static',
 #     '/Users/natebecker/.virtualenvs/venv_address_booker/startover/myproject',
 # )
 
