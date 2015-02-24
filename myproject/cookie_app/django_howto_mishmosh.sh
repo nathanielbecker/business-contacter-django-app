@@ -110,3 +110,6 @@ create table ang_backup as select * from cookie_app_more_data_page;
 
 ####install django suit
 pip install django-suit
+
+
+#####to deploy on EC2, you NEED to add an alias for /static/, see http://stackoverflow.com/questions/25368885/amazon-ec2-django-static-files-configuration, basically add this line to wsgi something "Alias /static/ /home/ubuntu/siter/business-contacter-django-app/myproject/static/"

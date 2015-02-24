@@ -35,7 +35,6 @@ sudo chown www-data myproject/db.sqlite3
 /home/ubuntu/siter/business-contacter-django-app/myproject/static
 /home/ubuntu/siter/business-contacter-django-app/myproject/media
 
-
 #####you NEED to add an alias for /static/, see http://stackoverflow.com/questions/25368885/amazon-ec2-django-static-files-configuration, basically add this line to wsgi something "Alias /static/ /home/ubuntu/siter/business-contacter-django-app/myproject/static/"
 
 
