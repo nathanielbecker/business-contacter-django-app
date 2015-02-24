@@ -10,12 +10,11 @@ from cookie_app import views
 from django.views.generic.base import RedirectView
 # from django.core.urlresolvers import reverse_lazy
 
-
+#### NOTE: for some reason, url patterns need to be entered into the OTHER urls.py in the myproject folder, and not this urls.py. Not sure why.
 urlpatterns = patterns(
     '',
     # url(r'^$', RedirectView.as_view(url= 'google.com'), name='index'), #http://quantile-assetman.rhcloud.com/
     # url(r'^$', RedirectView.as_view(url='http://djangoproject.com'), name='go-to-django'),
-    url(r'^go-to-django/', RedirectView.as_view(url='http://djangoproject.com', permanent=False)),
     # url(r'^$', Initial_Borr_List_PageList.as_view(), name='Initial_Borr_List_Page_list'),
     # url(r'^new/$', Initial_Borr_List_PageCreate.as_view(), name='Initial_Borr_List_Page_create'),
     # url(r'^(?P<pk>\d+)/$', Initial_Borr_List_PageDetail.as_view(), name='Initial_Borr_List_Page_detail'),
