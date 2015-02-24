@@ -8,11 +8,14 @@ from django.conf.urls import patterns, url, include
 from django.contrib import admin
 from cookie_app import views
 from django.views.generic import RedirectView
+# from django.core.urlresolvers import reverse_lazy
 
 
 urlpatterns = patterns(
-    # '',
-    (r'', RedirectView.as_view(url= 'http://quantile-assetman.rhcloud.com/')),
+    '',
+    # url(r'^$', RedirectView.as_view(url= 'google.com'), name='index'), #http://quantile-assetman.rhcloud.com/
+    # url(r'^$', RedirectView.as_view(pattern_name='my_named_pattern'), #http://quantile-assetman.rhcloud.com/
+    url(r'^$', RedirectView.as_view(url='http://djangoproject.com'), name='go-to-django'),
     # url(r'^$', Initial_Borr_List_PageList.as_view(), name='Initial_Borr_List_Page_list'),
     # url(r'^new/$', Initial_Borr_List_PageCreate.as_view(), name='Initial_Borr_List_Page_create'),
     # url(r'^(?P<pk>\d+)/$', Initial_Borr_List_PageDetail.as_view(), name='Initial_Borr_List_Page_detail'),
