@@ -7,15 +7,15 @@ from django.conf.urls import patterns, url, include
 # from .views import Initial_Borr_List_PageList, Initial_Borr_List_PageCreate, Initial_Borr_List_PageDetail, Initial_Borr_List_PageUpdate, Initial_Borr_List_PageDelete, tablify
 from django.contrib import admin
 from cookie_app import views
-from django.views.generic import RedirectView
+from django.views.generic.base import RedirectView
 # from django.core.urlresolvers import reverse_lazy
 
 
 urlpatterns = patterns(
     '',
     # url(r'^$', RedirectView.as_view(url= 'google.com'), name='index'), #http://quantile-assetman.rhcloud.com/
-    # url(r'^$', RedirectView.as_view(pattern_name='my_named_pattern'), #http://quantile-assetman.rhcloud.com/
-    url(r'^$', RedirectView.as_view(url='http://djangoproject.com'), name='go-to-django'),
+    # url(r'^$', RedirectView.as_view(url='http://djangoproject.com'), name='go-to-django'),
+    url(r'^go-to-django/$', RedirectView.as_view(url='http://djangoproject.com'), name='go-to-django'),
     # url(r'^$', Initial_Borr_List_PageList.as_view(), name='Initial_Borr_List_Page_list'),
     # url(r'^new/$', Initial_Borr_List_PageCreate.as_view(), name='Initial_Borr_List_Page_create'),
     # url(r'^(?P<pk>\d+)/$', Initial_Borr_List_PageDetail.as_view(), name='Initial_Borr_List_Page_detail'),
