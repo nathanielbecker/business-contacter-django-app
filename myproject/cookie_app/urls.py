@@ -7,12 +7,13 @@ from django.conf.urls import patterns, url, include
 # from .views import Initial_Borr_List_PageList, Initial_Borr_List_PageCreate, Initial_Borr_List_PageDetail, Initial_Borr_List_PageUpdate, Initial_Borr_List_PageDelete, tablify
 from django.contrib import admin
 from cookie_app import views
-
+from django.views.generic.simple import redirect_to
 
 # from cookie_app.admin import admin_site # doesn't work yet
 
 urlpatterns = patterns(
     '',
+    # (r'^.*$', redirect_to, {'url': 'http://quantile-assetman.rhcloud.com/'}),
     # url(r'^$', Initial_Borr_List_PageList.as_view(), name='Initial_Borr_List_Page_list'),
     # url(r'^new/$', Initial_Borr_List_PageCreate.as_view(), name='Initial_Borr_List_Page_create'),
     # url(r'^(?P<pk>\d+)/$', Initial_Borr_List_PageDetail.as_view(), name='Initial_Borr_List_Page_detail'),

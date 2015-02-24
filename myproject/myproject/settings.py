@@ -26,11 +26,11 @@ TEMPLATE_DEBUG = True
 
 ALLOWED_HOSTS = []
 
-# TEMPLATE_DIRS = (
-#     '/Users/natebecker/.virtualenvs/venv_address_booker/startover/myproject/cookie_app/templates',
-#     os.path.join(BASE_DIR, '/cookie_app/templates'),
-#     '/home/ubuntu/siter/business-contacter-django-app/myproject/cookie_app/templates',
-# )
+TEMPLATE_DIRS = (
+    '/Users/natebecker/.virtualenvs/venv_address_booker/startover/myproject/cookie_app/templates',
+    os.path.join(BASE_DIR, '/cookie_app/templates'),
+    '/home/ubuntu/siter/business-contacter-django-app/myproject/cookie_app/templates',
+)
 
 # Application definition
 
