@@ -3,8 +3,7 @@ from django.core.urlresolvers import reverse
 from django.db import models
 from django.contrib import admin
 from datetime import datetime
-from simple_history.models import HistoricalRecords # https://django-simple-history.readthedocs.org/en/latest/usage.html
-# import versioning # from https://pypi.python.org/pypi/django-versioning
+
 
 ##this is a hacky way to get inline forms--see http://lightbird.net/dbe/todo_list.html
 class DateTime(models.Model):
@@ -52,7 +51,6 @@ class Initial_Borr_List_Page(models.Model):
     Created = models.ForeignKey(DateTime, null=True)
     FindMoreData = models.BooleanField(default=False, verbose_name = "Find More Information")
     FollowUp=  models.BooleanField(default=False, verbose_name = "Contact Business")
-    history = HistoricalRecords()
     def __str__(self):
         return self.BorrName
     def get_absolute_url(self):
@@ -100,13 +98,6 @@ class More_Data_Page(models.Model):
     url = models.URLField(max_length=150, verbose_name = "Yelp Link", default='0000000',null=True)
     centile = models.CharField(max_length=150, verbose_name = "Loan Likelihood Score", default='0000000',null=True)
     Created = models.ForeignKey(DateTime, null=True)
-    history = HistoricalRecords()
-    @property # from https://django-simple-history.readthedocs.org/en/latest/advanced.html
-    def _history_user(self):
-        return self.changed_by
-    @_history_user.setter
-    def _history_user(self, value):
-        self.changed_by = value
     def __str__(self):
         return self.BorrName
     def get_absolute_url(self):
