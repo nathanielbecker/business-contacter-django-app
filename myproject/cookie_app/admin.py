@@ -10,6 +10,9 @@ from .models import Initial_Borr_List_Page, DateTime, More_Data_Page
 from django.contrib.admin.helpers import ActionForm
 from django import forms
 
+from django.contrib.admin.models import LogEntry, CHANGE###need these to log the results of actions
+from django.contrib.contenttypes.models import ContentType###need these to log the results of actions
+
 # class UpdateActionForm(ActionForm): ###this produces little check boxes next to the action dropdown
 #     # FollowUp = forms.BooleanField(required=False)
 #     FindMoreData = forms.BooleanField(required=False)
@@ -41,6 +44,15 @@ def update_followup(modeladmin, request, queryset):# add businesses to FollowUp
     FollowUp = bool(FollowUp)
     queryset.update(FollowUp=FollowUp)
     modeladmin.message_user(request, ("Will Contact these %d Businesses") % (queryset.count(),)) #, messages.SUCCESS
+    ct = ContentType.objects.get_for_model(queryset.model) # for_model --> get_for_model
+    for obj in queryset:
+        LogEntry.objects.log_action( # log_entry --> log_action
+            user_id = request.user.id,
+            content_type_id = ct.pk,
+            object_id = obj.pk,
+            object_repr = obj.Business_Name,
+            action_flag = CHANGE, # actions_flag --> action_flag
+            change_message = 'Added selections')
 update_followup.short_description = "Contact these Businesses"
 
 def update_followup_neg(modeladmin, request, queryset):# remove businesses from FollowUp
@@ -48,6 +60,15 @@ def update_followup_neg(modeladmin, request, queryset):# remove businesses from 
     FollowUp = bool(FollowUp)
     queryset.update(FollowUp=FollowUp)
     modeladmin.message_user(request, ("Will No Longer Contact these %d Businesses") % (queryset.count(),)) #, messages.SUCCESS
+    ct = ContentType.objects.get_for_model(queryset.model) # for_model --> get_for_model
+    for obj in queryset:
+        LogEntry.objects.log_action( # log_entry --> log_action
+            user_id = request.user.id,
+            content_type_id = ct.pk,
+            object_id = obj.pk,
+            object_repr = obj.Business_Name,
+            action_flag = CHANGE, # actions_flag --> action_flag
+            change_message = 'Removed selections')
 update_followup_neg.short_description = "Don't Contact these Businesses"
 
 ######
@@ -104,13 +125,23 @@ class More_data_page_admin(admin.ModelAdmin):
 
 
 
-
-
 admin.site.disable_action('delete_selected') #removes delete selected action--see http://stackoverflow.com/questions/1565812/the-default-delete-selected-admin-action-in-django
 
 admin.site.register(Initial_Borr_List_Page,barebones_admin)
 admin.site.register(DateTime, DateAdmin)
 admin.site.register(More_Data_Page, More_data_page_admin)
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

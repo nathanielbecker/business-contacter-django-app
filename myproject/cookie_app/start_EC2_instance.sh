@@ -1,7 +1,7 @@
 ###http://www.nickpolet.com/blog/deploying-django-on-aws/1/
 #####how to run EC2 instance of your site:
 chmod 400 ~/Desktop/key_pair_CA_2.pem
-ssh -i ~/Desktop/key_pair_CA_2.pem ubuntu@54.153.63.147
+ssh -i ~/Desktop/key_pair_CA_2.pem ubuntu@54.153.25.128
 ########
 sudo apt-get update
 sudo apt-get install apache2 libapache2-mod-wsgi
@@ -21,6 +21,7 @@ sudo pip install django-suit
 sudo pip install django-floppyforms
 sudo pip install django-bootstrap3
 sudo pip install django-tables2
+sudo apt-get install sqlite3
 
 python manage.py collectstatic
 sudo service apache2 restart
@@ -28,9 +29,11 @@ sudo service apache2 restart
 ####move db file to ec2 server
 sudo scp -i ~/Desktop/key_pair_CA_2.pem db.sqlite3 ubuntu@ec2-54-153-72-36.us-west-1.compute.amazonaws.com:~/.
 
+sudo chown www-data /home/ubuntu/siter/business-contacter-django-app/myproject/
+sudo chown www-data /home/ubuntu/siter/business-contacter-django-app/myproject/db.sqlite3
 
-sudo chown www-data myproject/
-sudo chown www-data myproject/db.sqlite3
+sudo chown ubuntu /home/ubuntu/siter/business-contacter-django-app/myproject/
+sudo chown ubuntu /home/ubuntu/siter/business-contacter-django-app/myproject/db.sqlite3
 
 /home/ubuntu/siter/business-contacter-django-app/myproject/static
 /home/ubuntu/siter/business-contacter-django-app/myproject/media

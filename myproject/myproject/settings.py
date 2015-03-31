@@ -51,6 +51,7 @@ INSTALLED_APPS = (
     'bootstrap3',
     'django_tables2',
     # 'csvimport.app.CSVImportConf', ####note that commenting this out removes csv importer from the left-hand menu side
+    'simple_history', #https://django-simple-history.readthedocs.org/en/latest/usage.html
 )
 
 MIDDLEWARE_CLASSES = (
@@ -61,6 +62,7 @@ MIDDLEWARE_CLASSES = (
     'django.contrib.auth.middleware.SessionAuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'simple_history.middleware.HistoryRequestMiddleware',####added via https://django-simple-history.readthedocs.org/en/latest/usage.html
 )
 
 ROOT_URLCONF = 'myproject.urls'

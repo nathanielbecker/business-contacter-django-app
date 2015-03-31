@@ -7,10 +7,6 @@ open /Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl
 ln -s "/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl" /usr/local/bin/sublime
 sublime filename (opens things in sublime)
 
-admin name: admin
-pw: pw
-
-
 ##this code allows you to deploy a django app on AWS
 
 #grab IP address from AWS public IP thing
@@ -89,6 +85,14 @@ find . -name 'change_list.html'
 
 git push -u origin master
 
+###admin login
+admin name: admin
+pw: pw9
+
+###admin login
+name: test_lender
+pw: pw9
+
 #####login for Angela Machado
 amachado
 celtic
@@ -96,6 +100,54 @@ celtic
 #####login for David Coffey
 dcoffey
 ablsba
+
+#####login for Erik Rajek
+erajek
+ridgestone
+
+#####login for Jonathan Thrasher
+jthrasher
+bridgeview
+
+#####login for Mike McGrane
+mmcgrane
+pacific
+
+#####login for Steve Penza
+spenza
+cbc
+
+#####login for Matthew Putnam
+mputnam
+yadkin
+
+#####login for Jesse Cruz
+jcruz
+jc8cj83
+
+#####login for Claudia Millington
+cmillington
+cortrustMN
+
+#####login for Melanie Brown
+mbrown
+signatureGA1
+
+#####login for Wade stringfield
+wstringfield
+ccommunity
+
+#####login for Bill Hand
+bhand
+pacwestcdc
+
+#####login for Dale Hayden
+dhayden
+homebankoc
+
+#####login for Chris Schmidt
+cschmidt
+banner8
 
 ###insert statement moving initial_page stuff to next_page
 insert into cookie_app_more_data_page SELECT * FROM cookie_app_initial_borr_list_page where  centile > 95 and Physical_State = 'CA' ORDER BY RANDOM() LIMIT 100;
@@ -113,3 +165,11 @@ pip install django-suit
 
 
 #####to deploy on EC2, you NEED to add an alias for /static/, see http://stackoverflow.com/questions/25368885/amazon-ec2-django-static-files-configuration, basically add this line to wsgi something "Alias /static/ /home/ubuntu/siter/business-contacter-django-app/myproject/static/"
+
+
+#####add in django admin history module to log all changes that are made to data in models
+pip install django-simple-history
+##try 2
+pip install django-versioning
+
+

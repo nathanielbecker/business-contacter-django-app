@@ -13,3 +13,4 @@ urlpatterns = patterns('',
     url(r'^cookie_app/', include('cookie_app.urls')),
     url(r'^$', RedirectView.as_view(url= 'http://quantile-assetman.rhcloud.com/'), name='index'), #
 )
+
