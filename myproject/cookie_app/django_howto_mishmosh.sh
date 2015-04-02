@@ -149,6 +149,15 @@ homebankoc
 cschmidt
 banner8
 
+#####login for Mike Fitzpatrick
+mfitzpatrick
+commercewest4
+
+#####login for Eriasi Akridge
+eakridge
+bridgeb4
+
+
 ###insert statement moving initial_page stuff to next_page
 insert into cookie_app_more_data_page SELECT * FROM cookie_app_initial_borr_list_page where  centile > 95 and Physical_State = 'CA' ORDER BY RANDOM() LIMIT 100;
 

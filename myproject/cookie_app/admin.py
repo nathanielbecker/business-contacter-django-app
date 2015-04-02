@@ -45,12 +45,12 @@ def update_followup(modeladmin, request, queryset):# add businesses to FollowUp
     queryset.update(FollowUp=FollowUp)
     modeladmin.message_user(request, ("Will Contact these %d Businesses") % (queryset.count(),)) #, messages.SUCCESS
     ct = ContentType.objects.get_for_model(queryset.model) # for_model --> get_for_model
-    for obj in queryset:
+    for obj in queryset: # all the logging code comes from http://stackoverflow.com/questions/15404199/django-custom-admin-actions-logging
         LogEntry.objects.log_action( # log_entry --> log_action
             user_id = request.user.id,
             content_type_id = ct.pk,
             object_id = obj.pk,
-            object_repr = obj.Business_Name,
+            object_repr = obj.AtoZ_ID,
             action_flag = CHANGE, # actions_flag --> action_flag
             change_message = 'Added selections')
 update_followup.short_description = "Contact these Businesses"
@@ -61,7 +61,7 @@ def update_followup_neg(modeladmin, request, queryset):# remove businesses from 
     queryset.update(FollowUp=FollowUp)
     modeladmin.message_user(request, ("Will No Longer Contact these %d Businesses") % (queryset.count(),)) #, messages.SUCCESS
     ct = ContentType.objects.get_for_model(queryset.model) # for_model --> get_for_model
-    for obj in queryset:
+    for obj in queryset: # all the logging code comes from http://stackoverflow.com/questions/15404199/django-custom-admin-actions-logging
         LogEntry.objects.log_action( # log_entry --> log_action
             user_id = request.user.id,
             content_type_id = ct.pk,
