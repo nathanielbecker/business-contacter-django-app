@@ -66,7 +66,7 @@ def update_followup_neg(modeladmin, request, queryset):# remove businesses from 
             user_id = request.user.id,
             content_type_id = ct.pk,
             object_id = obj.pk,
-            object_repr = obj.Business_Name,
+            object_repr = obj.AtoZ_ID,
             action_flag = CHANGE, # actions_flag --> action_flag
             change_message = 'Removed selections')
 update_followup_neg.short_description = "Don't Contact these Businesses"
